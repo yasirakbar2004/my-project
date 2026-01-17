@@ -1,0 +1,297 @@
+/* ================= RESET & GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: #f4f7fb;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ================= COLORS (CONSISTENCY) ================= */
+:root {
+  --primary: #0d6efd;
+  --dark: #0a1a2f;
+  --light-bg: #f4f7fb;
+  --card-bg: #ffffff;
+  --text-muted: #6b7a90;
+}
+
+/* ================= COMMON SECTION SPACING ================= */
+section {
+  padding: 70px 0;
+}
+
+/* ================= COMMON TITLES ================= */
+.section-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--dark);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+/* ================= BUTTONS ================= */
+.btn-primary {
+  background: var(--primary);
+  border: none;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.btn-primary:hover {
+  background: #084dbf;
+}
+
+/* ================= HEADER / NAVBAR ================= */
+.navbar {
+  background: var(--dark);
+}
+
+.navbar .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  padding: 10px 15px;
+}
+
+.navbar .nav-link:hover {
+  color: var(--primary) !important;
+}
+
+/* ================= HERO (HOME) ================= */
+.hero {
+  position: relative;
+  height: 85vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 56px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 600px;
+}
+
+/* ================= CARDS (GLOBAL) ================= */
+.card,
+.product-card,
+.client-card,
+.service-card {
+  background: var(--card-bg);
+  border-radius: 14px;
+  transition: 0.3s ease;
+}
+
+.card:hover,
+.product-card:hover,
+.client-card:hover,
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* ================= PRODUCT CARD ================= */
+.product-card {
+  padding: 22px;
+  text-align: center;
+  border: 1px solid #e3e8ef;
+  height: 100%;
+}
+
+.product-card img {
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.product-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.product-card p {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* ================= CATEGORY SIDEBAR ================= */
+.category-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 120px;
+}
+
+.category-list {
+  list-style: none;
+  padding: 0;
+}
+
+.category-list li {
+  margin-bottom: 8px;
+}
+
+.category-list li a {
+  display: block;
+  padding: 10px 14px;
+  border-radius: 6px;
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.category-list li a:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* ================= OUR WORK ================= */
+.work-card {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.work-card img {
+  width: 100%;
+  transition: 0.4s ease;
+}
+
+.work-card:hover img {
+  transform: scale(1.05);
+}
+
+.work-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ================= CLIENTS ================= */
+.client-card {
+  padding: 30px;
+  text-align: center;
+  background: #f9fbff;
+}
+
+.client-card img {
+  max-width: 140px;
+  margin: 0 auto 20px;
+}
+
+.client-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ================= ABOUT ================= */
+.about-text {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.8;
+}
+
+.about-points li {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* ================= CONTACT ================= */
+.contact-info p {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.contact-info i {
+  color: var(--primary);
+  margin-right: 10px;
+}
+
+/* ================= MAP ================= */
+iframe {
+  width: 100%;
+  height: 320px;
+  border-radius: 16px;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: var(--dark);
+  color: #fff;
+  padding: 50px 0;
+}
+
+.footer a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: var(--primary);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  section {
+    padding: 50px 0;
+  }
+
+  .category-box {
+    position: static;
+    margin-bottom: 25px;
+  }
+}

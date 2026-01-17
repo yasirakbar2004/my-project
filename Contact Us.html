@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Contact Us.css">
+    
+</head>
+<body>
+    
+     <div id="header"></div>
+  <section class="contact-section" id="contact">
+
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="contact-title">Contact Us</h2>
+        <p class="contact-subtitle">
+          Get in touch with us for any enquiry or support
+        </p>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row g-4">
+
+
+        <div class="col-lg-7">
+          <div class="contact-info">
+
+            <p><strong>Director:</strong> Mr Umer Akbar</p>
+
+            <p>
+              <strong>Email id:</strong>
+              <a href="mailto:director@Eagle eye.in">director@Eagle eye.in</a>
+            </p>
+
+            <p>
+              <a href="mailto:Eagleeye@gmail.com">waniumer@gmail.com</a>
+            </p>
+
+            <p>
+              <strong>Whatsapp No:</strong>
+              <a href="tel:9622678101">890311</a>
+            </p>
+
+            <p>
+              <strong>Office Number:</strong>
+              <a href="tel:01954468336">01985998926</a>
+            </p>
+
+            <hr>
+
+            <h5 class="support-title">For Technical Support</h5>
+
+            <p>
+              <a href="mailto:l1support@mEagleEye.in">l1support@Eagle Eye.in</a>
+            </p>
+
+            <p>
+              <strong>Calling Number:</strong>
+              <a href="tel:9622678101">238822</a>
+            </p>
+
+            <p>
+              <a href="mailto:l2support@Eagleeye.in">l2support@Eagle Eye.in</a>
+            </p>
+
+            <p>
+              <strong>Calling Number:</strong>
+              <a href="tel:7006577713">890311</a>
+            </p>
+
+          </div>
+        </div>
+
+
+        <div class="col-lg-5">
+          <div class="map-box">
+            <iframe src="https://www.google.com/maps?q=Hyderabad&output=embed" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+   <footer class="main-footer">
+    <div class="container">
+      <div class="row gy-4">
+
+
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Contact Eagle Eye Office:</h5>
+          <p>Huda complex, near petrolpump magam - 194301</p>
+
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Important Links</h5>
+          <ul class="footer-links">
+            <li><a href="#">GeM</a></li>
+            <li><a href="#">Our Policies</a></li>
+            <li><a href="#">About Us</a></li>
+          </ul>
+        </div>
+
+
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Career</h5>
+          <ul class="footer-links">
+            <li><a href="#">IT & Networking</a></li>
+            <li><a href="#">Accounts & Finance</a></li>
+            <li><a href="#">Sales & Marketing</a></li>
+          </ul>
+        </div>
+
+
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Our Solutions</h5>
+          <ul class="footer-links">
+            <li><a href="#">Networking Solutions</a></li>
+            <li><a href="#">Wifi & In-Building Coverage</a></li>
+            <li><a href="#">Installation & Commissioning</a></li>
+            <li><a href="#">Security Solutions</a></li>
+            <li><a href="#">Surveillance Solutions</a></li>
+            <li><a href="#">Other Solutions</a></li>
+            <li><a href="#">Video Conferencing Solutions</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <hr class="footer-divider">
+
+
+      <div class="row">
+        <div class="col-lg-12">
+          <h5 class="footer-title">Support</h5>
+          <p class="footer-support">
+            <a href="tel:+919622678101">+91 890311</a><br>
+            <a href="mailto:mitechnocare56@gmail.com">Waniumer@gmail.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <a href="#" class="scroll-top">
+      <i class="fa fa-arrow-up"></i>
+    </a>
+  </footer>
+
+
+</body>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header").innerHTML = data;
+    });
+</script>
+
+</html>
