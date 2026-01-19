@@ -480,3 +480,22 @@ html, body {
     
   }
 }                         
+/* ================= MOBILE HEADER CONTROL ================= */
+@media (max-width: 768px) {
+
+  /* Hide language, login, cart */
+  .user-actions {
+    display: none !important;
+  }
+
+  /* Center contact info */
+  .contact-info {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .contact-info i {
+    margin-right: 4px;
+  }
+}

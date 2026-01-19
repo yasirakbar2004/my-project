@@ -1,118 +1,5 @@
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  overflow-x: hidden;
-}
 
-/* HERO */
-.dc-hero {
-  height: 90vh;
-  background:
-    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-    url("images/data-center-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  margin-top: 81px;
-   background-image: url(images/back6.jpg);
-}
-
-.hero-content h1 {
-  font-size: 52px;
-  font-weight: 800;
-  color: #00e1ff;
-}
-
-.hero-content h3 {
-  color: #fff;
-  margin-top: 10px;
-}
-
-.hero-content p {
-  color: #ccc;
-  font-size: 18px;
-}
-
-/* BUTTON */
-.btn-dc {
-  background: #00e1ff;
-  color: #000;
-  padding: 12px 35px;
-  font-weight: 700;
-  border-radius: 50px;
-  box-shadow: 0 0 25px rgba(0,225,255,.6);
-}
-
-/* TITLES */
-.section-title {
-  font-size: 34px;
-  font-weight: 700;
-}
-
-.section-text {
-  max-width: 850px;
-  margin: auto;
-  font-size: 17px;
-  color: #555;
-}
-
-/* GALLERY */
-.dc-gallery {
-  background: #0b0f17;
-}
-
-.img-box {
-  overflow: hidden;
-  border-radius: 16px;
-  box-shadow: 0 15px 40px rgba(0,0,0,.6);
-}
-
-.img-box img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  transition: transform .5s ease;
-}
-
-.img-box:hover img {
-  transform: scale(1.08);
-}
-
-/* CARDS */
-.dc-card {
-  background: #111;
-  color: #fff;
-  padding: 35px;
-  border-radius: 15px;
-  text-align: center;
-  transition: transform .3s;
-}
-
-.dc-card:hover {
-  transform: translateY(-10px);
-}
-
-.dc-card i {
-  font-size: 45px;
-  color: #00e1ff;
-  margin-bottom: 15px;
-}
-
-/* CTA */
-.dc-cta {
-  background: linear-gradient(to right, #000428, #004e92);
-  color: #fff;
-  padding: 80px 0;
-}
-
-    body {
-      background: #ffffff;
-      color: #333;
-      padding-top: 70px;
-    }
-
- 
+  
     *
 {
   margin-top: 0%;
@@ -241,8 +128,15 @@ section {
   }
 }
 
+.service-card {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
 
 
 .main-footer {
@@ -352,10 +246,4 @@ section {
 #bullet
 {
   margin-left: 200px;
-}
-
-
-
-html, body {
-  overflow-x: hidden;
 }

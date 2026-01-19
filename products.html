@@ -17,15 +17,15 @@
 
   <div id="header"></div>
 
-<div class="container-fluid products-wrap">
+<div class="container-fluid products-wrap ">
   <div class="row">
 
    
     <div class="col-lg-3 col-md-4 mb-4">
-      <div class="category-box">
+      <div class="category-box reveal">
         <h5>Categories</h5>
         <p>Select product type</p>
-        <ul class="category-list">
+        <ul class="category-list ">
           <li><a href="#wireless">Wireless</a></li>
           <li><a href="#switches">Switches</a></li>
           <li><a href="#surveillance">Surveillance</a></li>
@@ -40,10 +40,12 @@
     <div class="col-lg-9 col-md-8">
 
    
-      <h3 id="wireless" class="category-title">Wireless</h3>
+      <h3 id="wireless" class="category-title reveal">Wireless</h3>
+
       <div class="row g-4">
         <div class="col-lg-4 col-md-6">
-          <div class="product-card">
+        <div class="product-card reveal">
+
             <img src="images/wifi.png">
             <h4>Wi-Fi 6 Access Point</h4>
             <p>D-Link Wireless PoE Access Point</p>
@@ -196,6 +198,7 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
  <!-- Bootstrap JS -->
 
@@ -207,6 +210,33 @@
     .then(data => {
       document.getElementById("header").innerHTML = data;
     });
+  
+
+  $(document).ready(function () {
+
+    function revealOnScroll() {
+      const windowHeight = $(window).height();
+      const scrollTop = $(window).scrollTop();
+
+      $(".reveal").each(function () {
+        const elementTop = $(this).offset().top;
+        const revealPoint = 120; // distance before visible
+
+        if (scrollTop + windowHeight > elementTop + revealPoint) {
+          $(this).addClass("active");
+        } else {
+          // remove if you want re-animation
+          $(this).removeClass("active");
+        }
+      });
+    }
+
+    // Run on load & scroll
+    $(window).on("scroll load", revealOnScroll);
+
+  });
+
+
 </script>
 
 </body>

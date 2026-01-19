@@ -295,3 +295,51 @@ iframe {
     margin-bottom: 25px;
   }
 }
+.fixed-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+
+  /* smooth, floating motion */
+  transition:
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity   0.55s ease;
+}
+
+
+/* HIDDEN STATE */
+.fixed-header.header-hide {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* VISIBLE STATE */
+.fixed-header.header-show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* BODY OFFSET */
+body {
+  padding-top: 120px; /* adjust to your header height */
+}
+/* ================= MOBILE HEADER CONTROL ================= */
+@media (max-width: 768px) {
+
+  /* Hide language, login, cart */
+  .user-actions {
+    display: none !important;
+  }
+
+  /* Center contact info */
+  .contact-info {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .contact-info i {
+    margin-right: 4px;
+  }
+}

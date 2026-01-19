@@ -504,3 +504,25 @@ html, body {
     
   }
 }                         
+/* ===== GLOBAL SCROLL ANIMATION ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* When visible */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile tuning */
+@media (max-width: 768px) {
+  .reveal {
+    transform: translateY(40px);
+    transition-duration: 0.8s;
+  }
+}
