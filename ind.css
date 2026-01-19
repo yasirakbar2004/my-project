@@ -37,7 +37,8 @@ section {
 #mainlogo {
   width: 300px;
   height: auto;
-  margin-top: 14px;               
+  margin-top: 14px;  
+  object-fit: cover;             
 }
 
 
@@ -103,6 +104,7 @@ section {
   #mainlogo {
     width: 220px;
     margin-top: 0;
+    object-fit: cover;
   }
 
   .main-navbar .navbar-nav {
@@ -546,8 +548,10 @@ section {
   object-fit: contain;
   transition: transform 0.3s ease;
 }
-.client-logo img:hover {
-  transform: scale(2); 
+@media (min-width: 992px) {
+  .client-logo img:hover {
+    transform: scale(2);
+  }
 }
 
 .client-logo {
@@ -902,10 +906,6 @@ section {
   }
 }
 
-#bullet
-{
-  margin-left: 200px;
-}
 
 
 
@@ -1018,4 +1018,63 @@ html, body {
 .work-card.show {
   opacity: 1;
   transform: translateX(0);
+}
+
+/* =========================
+   MOBILE CRITICAL FIX
+========================= */
+@media (max-width: 768px) {
+
+  /* REMOVE LEFT PUSH */
+  #bullet {
+    margin-left: 0 !important;
+  }
+
+  /* HERO FIX */
+  .hero-content {
+    top: auto;
+    transform: none;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .hero-slide {
+    height: auto;
+    min-height: 60vh;
+  }
+
+  /* CLIENT SLIDER FIX */
+  .clients-track {
+    width: auto;
+  }
+
+  .client-logo img:hover {
+    transform: scale(1.1);
+  }
+
+  /* NAVBAR FIX */
+  .navbar-nav {
+    align-items: center;
+  }
+
+  /* LOGO FIX */
+  #mainlogo {
+    width: 160px !important;
+    height: auto !important;
+  }
+
+}
+
+/* ===== REAL MOBILE FIX FOR BOOTSTRAP CAROUSEL ===== */
+@media (max-width: 768px) {
+
+  .carousel-inner {
+    display: block !important;
+  }
+
+  .carousel-item {
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+
 }

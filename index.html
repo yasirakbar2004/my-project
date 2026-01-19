@@ -16,6 +16,7 @@
 
   <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="ind.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 </head>
@@ -715,7 +716,7 @@
 
 
 
- 
+  
   $(document).ready(function () {
 
     let lastScrollTop = 0;
@@ -726,7 +727,7 @@
     $(window).on("scroll", function () {
       const scrollTop = $(this).scrollTop();
 
-      // SCROLL DOWN
+      
       if (scrollTop > lastScrollTop && scrollTop > 150) {
 
         $(".fixed-header")
@@ -742,7 +743,7 @@
         }, delayTime);
 
       }
-      // SCROLL UP
+     
       else {
         $(".fixed-header")
           .removeClass("header-hide")

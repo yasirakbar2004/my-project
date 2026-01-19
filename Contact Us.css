@@ -45,9 +45,10 @@ section {
 
 
 #mainlogo {
-  width: 300px;
+  width: 350px;
   height: auto;
-  margin-top: 14px;               
+  margin-top: 14px;  
+  object-fit: cover;             
 }
 
 
