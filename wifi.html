@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Security Cameras | Eagle Eye</title>
+  <title>Fire Alarm Systems | Eagle Eye</title>
 
+  <!-- Bootstrap -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-<link rel="stylesheet" href="all.css">
+    <!-- Google Font (Corporate Standard) -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+ <link rel="stylesheet" href="all.css">
   <style>
     body {
       background: #ffffff;
@@ -17,25 +20,29 @@
       padding-top: 70px;
     }
 
+    /* HEADER */
     .page-header {
-      background: linear-gradient(to right, darkgray);
+      background: linear-gradient(to right, #000, #1b2c44);
       color: #fff;
       padding: 90px 0;
-      margin-top:15px
+      margin-top: 13px;
     }
 
+    /* CONTENT BOX */
     .content-box {
       background: #fff;
       padding: 35px;
       border-radius: 14px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      margin-top: 30px;
     }
 
     .feature-img {
       border-radius: 12px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
-   *
+
+    *
 {
   margin-top: 0%;
 }
@@ -281,79 +288,198 @@ section {
 html, body {
   overflow-x: hidden;
 }
+  
+
+
+
+/* ---------- RESET ---------- */
+
+
+/* ---------- GLOBAL ---------- */
+
+
+
+/* ---------- HERO ---------- */
+.hero {
+  min-height: 65vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("images/wifi4.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.hero-content {
+  max-width: 720px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 52px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #e5e7eb;
+}
+
+/* ---------- SECTION TITLES ---------- */
+.section-title {
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  margin-top: 20px;
+}
+
+.section-text {
+  font-size: 18px;
+  color: #4b5563;
+  max-width: 760px;
+}
+
+/* ---------- TWO COLUMN ---------- */
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.two-column img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* ---------- LIST ---------- */
+.clean-list {
+  list-style: none;
+  margin-top: 25px;
+}
+
+.clean-list li {
+  font-size: 18px;
+  margin-bottom: 14px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.clean-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #2563eb;
+  font-size: 22px;
+}
+
+/* ---------- CTA ---------- */
+.cta {
+  background: #f9fafb;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.cta h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.cta p {
+  font-size: 18px;
+  color: #4b5563;
+}
+
+.cta a {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 36px;
+  background: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+  .hero h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  
+  
+  .hero h1 {
+    font-size: 32px;
+  }
+  .section-title {
+    font-size: 26px;
+    margin-top: 20px;
+  }
+ 
+}
+
 
   </style>
 </head>
 <body>
-
-   <div id="header"></div>
-
-<!-- HEADER -->
-<section class="page-header text-center ">
-  <div class="container">
-    <h1>Security Cameras</h1>
-    <p>High-tech surveillance solutions for complete protection</p>
-  </div>
-</section>
-
- 
- 
-<section class="py-5">
-  <div class="container">
-
-    <!-- IMAGE + TEXT -->
-    <div class="row align-items-center mb-5">
-      <div class="col-md-6 mb-4 mb-md-0">
-        <img src="images/securty1.png" class="img-fluid feature-img" alt="Security Camera Monitoring">
-      </div>
-
-      <div class="col-md-6">
-        <h3>High Tech Security Cameras to Monitor Streets</h3>
-        <p>
-          Security cameras provide continuous monitoring to protect homes,
-          offices, and commercial spaces. Our systems deliver crystal-clear
-          video, intelligent motion detection, and real-time alerts.
-        </p>
-        <p>
-          From small residential setups to large-scale city surveillance,
-          our solutions are designed for reliability, safety, and future
-          expansion.
-        </p>
-      </div>
-    </div>
+ <div id="header"></div>
 
    
-    <div class="row g-4">
-
-      <div class="col-md-4">
-        <div class="content-box text-center">
-          <img src="images/securty4.png" class="img-fluid mb-3 feature-img" alt="">
-          <h5>Night Vision</h5>
-          <p>Clear monitoring even in complete darkness.</p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="content-box text-center">
-          <img src="images/securt2.png" class="img-fluid mb-3 feature-img" alt="">
-          <h5>Remote Monitoring</h5>
-          <p>View live footage anytime from mobile or desktop.</p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="content-box text-center">
-          <img src="images/securty3.png" class="img-fluid mb-3 feature-img" alt="">
-          <h5>Commercial Security</h5>
-          <p>Scalable systems for offices and public areas.</p>
-        </div>
-      </div>
-
-    </div>
-
+<section class="hero">
+  <div class="hero-content">
+    <h1>Enterprise Wi-Fi Solutions</h1>
+    <p>
+      High-performance, secure Wi-Fi networks designed to support
+      modern business operations and high-density environments.
+    </p>
   </div>
 </section>
 
+<!-- OVERVIEW -->
+<section class="container">
+  <h2 class="section-title">Overview</h2>
+  <p class="section-text">
+    Our Wi-Fi solutions provide reliable, secure, and scalable wireless
+    connectivity for offices, campuses, retail spaces, healthcare facilities,
+    and industrial environments. We focus on coverage, capacity, and security
+    to deliver a seamless user experience.
+  </p>
+</section>
+
+<!-- CAPABILITIES -->
+<section class="container two-column">
+  <div>
+    <h2 class="section-title">Our Capabilities</h2>
+    <ul class="clean-list">
+      <li>Enterprise Wi-Fi network design & deployment</li>
+      <li>High-density user environments</li>
+      <li>Guest Wi-Fi & captive portal solutions</li>
+      <li>Advanced security & access control</li>
+      <li>Wi-Fi performance monitoring & optimization</li>
+    </ul>
+  </div>
+
+  <div>
+    <img src="images/wifi5.png" alt="Enterprise Wi-Fi infrastructure">
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Upgrade Your Wireless Experience</h2>
+  <p>Connect with our experts to design a reliable enterprise Wi-Fi solution.</p>
+  <a href="Contact Us.html">Request a Consultation</a>
+</section>
  
   <footer class="main-footer">
     <div class="container">
@@ -416,21 +542,21 @@ html, body {
           <h5 class="footer-title">Support</h5>
           <p class="footer-support">
             <a href="tel:+917780890311">7780890311</a><br>
-             <a href="mailto:waniumer@gmail.com">waniumer@gmail.com</a>
+              <a href="mailto:waniumer@gmail.com">waniumer@gmail.com</a>
           </p>
         </div>
       </div>
     </div>
 
 
-    <a href="#" class="scroll-top">
+    <a href="" class="scroll-top">
       <i class="fa fa-arrow-up"></i>
     </a>
   </footer>
 </body>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-   <script>
+    <script>
   fetch("header.html")
     .then(res => res.text())
     .then(data => {

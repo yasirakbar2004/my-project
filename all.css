@@ -14,7 +14,7 @@ body {
    TOP BAR
 ================================ */
 .top-bar {
-  height: 40px;
+  height: 20px;
   background: linear-gradient(to right, #1b2c44, #0a1a2f);
   color: #fff;
   font-size: 14px;
@@ -40,12 +40,12 @@ body {
   min-height: 80px;
   display: flex;
   align-items: center;   /* ✅ CENTERED like screenshot */
-  padding: 0 30px;
+  padding: 0 20px;
 }
 
 /* LOGO */
 #mainlogo {
-  height: 85px;          /* ✅ screenshot size */
+  height: 70px;          /* ✅ screenshot size */
   width: auto;
 }
 

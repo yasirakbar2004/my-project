@@ -31,18 +31,19 @@ section {
 
 .main-navbar {
   min-height: 80px;               
-  background: #000;
+  background: rgba(0, 0, 0, 0.954);;
   display: flex;
   align-items: flex-start;        
-  padding: 0 30px;
+  padding: 0 20px;
 }
 
 
 #mainlogo {
-  width: 300px;
+   width: 300px;
   height: auto;
-  margin-top: 14px;  
-  object-fit: cover;             
+  
+  object-fit: cover;  
+  background-color:transparent;          
 }
 
 
@@ -415,7 +416,7 @@ html, body {
 .about-header-section {
   width: 100%;
   background: #fff;
-  margin-top: 30px;
+ 
 
 }
 
@@ -550,5 +551,40 @@ html, body {
 
   .contact-info i {
     margin-right: 4px;
+  }
+}
+/* ================= MOBILE VIEW ================= */
+@media (max-width: 768px) {
+
+  /* 1️⃣ Remove top bar completely */
+  .top-bar {
+    display: none !important;
+  }
+
+  /* 2️⃣ Header styling */
+  header,
+  .navbar {
+    position: fixed;
+    top: -7px;                  /* small top gap */
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  /* 3️⃣ Prevent content overlap */
+  body {
+    padding-top: 70px;         /* header height + gap */
+  }
+
+  /* 4️⃣ MOBILE SLIDER TOP SPACE */
+  .slider,
+  .hero,
+  .banner,
+  .carousel,
+  .swiper {
+    margin-top: 25px;          /* space below header */
   }
 }

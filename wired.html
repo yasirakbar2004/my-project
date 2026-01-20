@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fire Alarm Systems | Eagle Eye</title>
+
+  <!-- Bootstrap -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <!-- Google Font (Corporate Standard) -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+ <link rel="stylesheet" href="all.css">
+  <style>
+    body {
+      background: #ffffff;
+      color: #333;
+      padding-top: 70px;
+    }
+
+    /* HEADER */
+    .page-header {
+      background: linear-gradient(to right, #000, #1b2c44);
+      color: #fff;
+      padding: 90px 0;
+      margin-top: 13px;
+    }
+
+    /* CONTENT BOX */
+    .content-box {
+      background: #fff;
+      padding: 35px;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      margin-top: 30px;
+    }
+
+    .feature-img {
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    *
+{
+  margin-top: 0%;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f4f7fb;
+  font-family: "Poppins", Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 120px; 
+}
+
+
+
+.top-bar {
+  height: 40px;
+  background: linear-gradient(to right, #1b2c44, #0a1a2f);
+  color: #fff;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+ 
+  z-index: 9000;
+ 
+  align-items: center;
+
+
+
+}
+
+
+.main-navbar {
+  height: 80px;
+  background: #000;
+   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9000;
+ 
+}
+
+ .navbar-nav .nav-item {
+  margin: 0 10px;   
+}
+.nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  padding: 10px 25px;
+}
+
+.nav-link:hover {
+  color: #00d4ff !important;
+}
+#mainlogo
+{
+  width: 300px;
+  height: 80px;
+  margin: 0px;
+  object-fit: cover;
+}
+
+
+
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: #0056a3;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .nav-link {
+    color: #fff !important;
+    padding: 10px 0;
+    display: block;
+    text-align: center;
+    
+  }
+}
+
+
+@media (max-width: 480px) {
+  #mainlogo {
+    max-width: 160px;
+    height: 60px;
+  }
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+  #mainlogo {
+    max-width: 200px;
+   height: 60px;
+  }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  #mainlogo {
+    max-width: 240px;
+     height: 60px;
+  }
+}
+
+
+@media (min-width: 1025px) {
+  #mainlogo {
+    max-width: 300px;
+    height: 80px;
+  }
+}
+
+
+
+
+.main-footer {
+  background: linear-gradient(180deg, #061a3a, #04122b);
+  color: #bfc9d9;
+  padding: 60px 0 30px;
+  position: relative;
+}
+
+.footer-title {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.main-footer p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #bfc9d9;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #00b4ff;
+  padding-left: 5px;
+}
+
+
+.footer-social a {
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #0d6efd;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  background: #00b4ff;
+}
+
+
+.footer-divider {
+  border-color: rgba(255,255,255,0.1);
+  margin: 30px 0;
+}
+
+
+.footer-support a {
+  color: #00b4ff;
+  text-decoration: none;
+}
+
+.footer-support a:hover {
+  text-decoration: underline;
+}
+
+
+.scroll-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 45px;
+  height: 45px;
+  background: #00b4ff;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.scroll-top:hover {
+  background: #0d6efd;
+}
+
+
+@media (max-width: 768px) {
+  .footer-title {
+    margin-top: 20px;
+  }
+}
+
+#bullet
+{
+  margin-left: 200px;
+}
+
+
+
+html, body {
+  overflow-x: hidden;
+}
+  
+
+
+
+/* ---------- RESET ---------- */
+
+
+/* ---------- GLOBAL ---------- */
+
+
+
+/* ---------- HERO ---------- */
+.hero {
+  min-height: 65vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("images/rack8.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.hero-content {
+  max-width: 720px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 52px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #e5e7eb;
+}
+
+/* ---------- SECTION TITLES ---------- */
+.section-title {
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  margin-top: 20px;
+}
+
+.section-text {
+  font-size: 18px;
+  color: #4b5563;
+  max-width: 760px;
+}
+
+/* ---------- TWO COLUMN ---------- */
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.two-column img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* ---------- LIST ---------- */
+.clean-list {
+  list-style: none;
+  margin-top: 25px;
+}
+
+.clean-list li {
+  font-size: 18px;
+  margin-bottom: 14px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.clean-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #2563eb;
+  font-size: 22px;
+}
+
+/* ---------- CTA ---------- */
+.cta {
+  background: #f9fafb;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.cta h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.cta p {
+  font-size: 18px;
+  color: #4b5563;
+}
+
+.cta a {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 36px;
+  background: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+  .hero h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  
+  
+  .hero h1 {
+    font-size: 32px;
+  }
+  .section-title {
+    font-size: 26px;
+    margin-top: 20px;
+  }
+ 
+}
+
+
+  </style>
+</head>
+<body>
+ <div id="header"></div>
+
+   
+<!-- PAGE HEADER -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Wired Networking Solutions</h1>
+    <p>
+      Enterprise-grade wired network infrastructure engineered for
+      performance, security, and long-term reliability.
+    </p>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="container">
+  <h2 class="section-title">Overview</h2>
+  <p class="section-text">
+    We design and deploy robust wired networking solutions for offices,
+    commercial buildings, data centers, and industrial environments.
+    Our infrastructure ensures consistent performance, minimal downtime,
+    and future scalability.
+  </p>
+</section>
+
+<!-- CAPABILITIES -->
+<section class="container two-column">
+  <div>
+    <h2 class="section-title">Our Capabilities</h2>
+    <ul class="clean-list">
+      <li>Structured cabling (Cat6, Cat6A & Fiber)</li>
+      <li>LAN and enterprise network design</li>
+      <li>Switch & router installation and configuration</li>
+      <li>Network documentation and labeling</li>
+      <li>Testing, certification & performance audits</li>
+    </ul>
+  </div>
+
+  <div>
+    <img src="images/wird.png" alt="Enterprise wired network infrastructure">
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Build a Reliable Network Foundation</h2>
+  <p>Consult our experts for a customized wired networking solution.</p>
+  <a href="Contact Us.html">Request a Consultation</a>
+</section>
+
+ 
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row gy-4">
+
+
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Contact Eagle Eye Office:</h5>
+          <p>Bhat complex, near petrol pump
+ magam - 194301</p>
+
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Important Links</h5>
+          <ul class="footer-links">
+            <li><a href="#">GeM</a></li>
+            <li><a href="#">Our Policies</a></li>
+            <li><a href="#">About Us</a></li>
+          </ul>
+        </div>
+
+
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Career</h5>
+          <ul class="footer-links">
+            <li><a href="#">IT & Networking</a></li>
+            <li><a href="#">Accounts & Finance</a></li>
+            <li><a href="#">Sales & Marketing</a></li>
+          </ul>
+        </div>
+
+
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Our Solutions</h5>
+          <ul class="footer-links">
+            <li><a href="#">Networking Solutions</a></li>
+            <li><a href="#">Wifi & In-Building Coverage</a></li>
+            <li><a href="#">Installation & Commissioning</a></li>
+            <li><a href="#">Security Solutions</a></li>
+            <li><a href="#">Surveillance Solutions</a></li>
+            <li><a href="#">Other Solutions</a></li>
+            <li><a href="#">Video Conferencing Solutions</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <hr class="footer-divider">
+
+
+      <div class="row">
+        <div class="col-lg-12">
+          <h5 class="footer-title">Support</h5>
+          <p class="footer-support">
+            <a href="tel:+917780890311">7780890311</a><br>
+              <a href="mailto:waniumer@gmail.com">waniumer@gmail.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <a href="" class="scroll-top">
+      <i class="fa fa-arrow-up"></i>
+    </a>
+  </footer>
+</body>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header").innerHTML = data;
+    });
+</script>
+
+</body>
+</html>

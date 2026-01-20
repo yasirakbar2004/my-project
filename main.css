@@ -62,13 +62,13 @@ section {
 
 /* ================= HEADER / NAVBAR ================= */
 .navbar {
-  background: var(--dark);
+  background: black;
 }
 
 .navbar .nav-link {
   color: #fff !important;
   font-weight: 500;
-  padding: 10px 15px;
+  padding: 6px 14px;
 }
 
 .navbar .nav-link:hover {
@@ -322,7 +322,7 @@ iframe {
 
 /* BODY OFFSET */
 body {
-  padding-top: 120px; /* adjust to your header height */
+  padding-top: 95px; /* adjust to your header height */
 }
 /* ================= MOBILE HEADER CONTROL ================= */
 @media (max-width: 768px) {
@@ -342,4 +342,20 @@ body {
   .contact-info i {
     margin-right: 4px;
   }
+}
+/* ===== MOBILE HEADER HEIGHT REDUCTION ONLY ===== */
+@media (max-width: 768px) {
+
+  /* reduce link padding → header becomes shorter */
+  .navbar .nav-link {
+    padding: 6px 12px;
+  }
+
+}
+@media (max-width: 768px) {
+
+  body {
+    padding-top: 80px;
+  }
+
 }

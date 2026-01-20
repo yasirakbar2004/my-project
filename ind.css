@@ -27,7 +27,7 @@ section {
 
 .main-navbar {
   min-height: 80px;               
-  background: #000;
+  background:rgba(0, 0, 0, 0.954);
   display: flex;
   align-items: flex-start;        
   padding: 0 30px;
@@ -38,7 +38,8 @@ section {
   width: 300px;
   height: auto;
   margin-top: 14px;  
-  object-fit: cover;             
+  object-fit: cover;   
+          
 }
 
 
@@ -1065,16 +1066,110 @@ html, body {
 
 }
 
-/* ===== REAL MOBILE FIX FOR BOOTSTRAP CAROUSEL ===== */
+/* ================= MOBILE NAVBAR FIX ================= */
 @media (max-width: 768px) {
 
-  .carousel-inner {
-    display: block !important;
+  /* Main navbar height reduction */
+  .main-navbar {
+    min-height: 30px;              /* reduced height */
+               /* tighter padding */
+    border-radius: 50px;           /* rounded navbar */
+                    /* spacing from screen edges */
+    align-items: center;
   }
 
-  .carousel-item {
-    width: 100% !important;
-    min-width: 100% !important;
+  /* Logo size adjustment */
+  #mainlogo {
+    max-width: 150px;
+    height: auto;
+    margin: 0;
   }
 
+  /* Navbar collapse box (menu background) */
+  .navbar-collapse {
+    background: #0056a3;
+    border-radius: 12px;           /* rounded dropdown */
+    padding: 10px;
+    margin-top: 8px;
+  }
+
+  /* Nav links spacing */
+  .nav-link {
+    padding: 8px 10px;
+    font-size: 15px;
+  }
+
+}
+/* ================= MOBILE CONTAINER HEIGHT FIX ================= */
+@media (max-width: 768px) {
+
+  /* Reduce navbar container height */
+  .main-navbar .container,
+  .main-navbar .container-fluid {
+    padding-top: 0%;
+    padding-bottom: 0%;
+    min-height: auto;
+  }
+
+  /* Reduce navbar height */
+  .main-navbar {
+      border-radius: 0px;  /* control height here */
+    padding: 0px 0px;
+  }
+
+  /* Reduce logo vertical space */
+  #mainlogo {
+    height: 48px;
+    max-width: 150px;
+  }
+
+}
+/* ================= MOBILE VIEW ================= */
+@media (max-width: 768px) {
+
+  /* Hide email & phone */
+  .top-bar .contact-info {
+    display: none !important;
+  }
+
+  /* Hide language, login & cart */
+  .top-bar .user-actions {
+    display: none !important;
+  }
+
+}
+/* ================= MOBILE VIEW ================= */
+@media (max-width: 768px) {
+
+  /* 1️⃣ Remove top bar completely */
+  .top-bar {
+    display: none !important;
+  }
+
+  /* 2️⃣ Header styling */
+  header,
+  .navbar {
+    position: fixed;
+    top: -7px;                  /* small top gap */
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  /* 3️⃣ Prevent content overlap */
+  body {
+    padding-top: 70px;         /* header height + gap */
+  }
+
+  /* 4️⃣ MOBILE SLIDER TOP SPACE */
+  .slider,
+  .hero,
+  .banner,
+  .carousel,
+  .swiper {
+    margin-top: 25px;          /* space below header */
+  }
 }

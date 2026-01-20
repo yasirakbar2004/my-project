@@ -173,6 +173,7 @@ section {
   width: 400px;
   height: 80px;
   margin: 0px;
+  object-fit: cover;
 }
 
 
