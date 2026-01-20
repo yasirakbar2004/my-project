@@ -114,6 +114,7 @@ section {
   #mainlogo {
     width: 220px;
     margin-top: 0;
+    object-fit: cover;
   }
 
   .main-navbar .navbar-nav {

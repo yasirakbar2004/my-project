@@ -27,7 +27,7 @@ section {
 
 .main-navbar {
   min-height: 80px;               
-  background:rgba(0, 0, 0, 0.954);
+  background:black;
   display: flex;
   align-items: flex-start;        
   padding: 0 30px;
