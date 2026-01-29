@@ -145,25 +145,55 @@ section {
 
 @media (min-width: 992px) {
 
-  .navbar .dropdown:hover > .dropdown-menu {
-    display: block;
-    margin-top: 0;   /* removes jump */
-  }
-
-  /* Optional: smooth fade effect */
+  /* Keep dropdown in DOM */
   .navbar .dropdown-menu {
+    display: block;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.25s ease, visibility 0.25s ease;
+    transform: translateY(10px);
+    padding: 4px 0;
+    background: #f1f1f1;
+    margin-right: 400px;
+    transition:
+      opacity 0.35s ease,
+      transform 0.35s ease,
+      padding 0.4s ease,
+      visibility 0.4s;
   }
 
+  /* Dropdown open */
   .navbar .dropdown:hover > .dropdown-menu {
     opacity: 1;
     visibility: visible;
+    transform: translateY(0);
+    padding: 12px 0;
   }
 
+  /* Individual menu items */
+  .navbar .dropdown-menu .dropdown-item {
+    height: 32px;
+    padding: 6px 20px;
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+      height 0.45s cubic-bezier(.73,.32,.34,1.5),
+      padding 0.45s cubic-bezier(.73,.32,.34,1.5),
+      opacity 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  /* Closed state items */
+  .navbar .dropdown:not(:hover) .dropdown-item {
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    opacity: 0;
+    transform: translateY(-5px);
+    pointer-events: none;
+  }
 }
-/* Remove dropdown arrow icon */
+
+/* Remove arrow */
 .navbar .dropdown-toggle::after {
   display: none;
 }
